@@ -1,0 +1,51 @@
+// AI相談プロキシ — APIキーは環境変数 ANTHROPIC_API_KEY (Netlify管理画面で設定)
+export default async (req) => {
+  if (req.method !== 'POST') {
+    return new Response(JSON.stringify({ error: 'Method not allowed' }), { status: 405 });
+  }
+
+  let body;
+  try { body = await req.json(); } catch { 
+    return new Response(JSON.stringify({ error: 'Bad request' }), { status: 400 });
+  }
+
+  const messages = Array.isArray(body.messages) ? body.messages.slice(-20) : [];
+  const motive = String(body.motive || '').slice(0, 100);
+  if (!messages.length) {
+    return new Response(JSON.stringify({ error: 'messages required' }), { status: 400 });
+  }
+
+  // 入力の簡易バリデーション(role/contentのみ通す・長さ制限)
+  const safeMessages = messages
+    .filter(m => (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string')
+    .map(m => ({ role: m.role, content: m.content.slice(0, 2000) }));
+
+  const system = `あなたは熱狂的な健康オタクの「ケン」です。ユーザーの健康へのきっかけは「${motive}」です。その背景に寄り添いながら、栄養学・運動生理学・睡眠科学・メンタルヘルスに基づいた実践的なアドバイスを提供してください。口調はフレンドリーで元気よく絵文字を適度に使う。200〜300文字程度で簡潔に。最後に小さなTipsを一つ添える。日本語で回答する。
+あなたは医師ではないため、診断や治療の指示は行わず、症状が深刻な場合は必ず医療機関の受診を勧めてください。
+ユーザーが不安・落ち込み・イライラ・パニック・孤独など精神的なつらさを訴えた場合は、温かく寄り添いながら「🧘 こころタブに気分別のリラックス法があるよ！ぜひ見てみて」と自然に案内してください。`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system,
+        messages: safeMessages,
+      }),
+    });
+    const data = await res.json();
+    const reply = data?.content?.[0]?.text || '';
+    return new Response(JSON.stringify({ reply }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (e) {
+    return new Response(JSON.stringify({ error: 'upstream error' }), { status: 502 });
+  }
+};
