@@ -1,0 +1,12 @@
+﻿[09/07/26 16:51:03] info: Program: Starting Squirrel Updater: --update https://central.github.com/api/deployments/desktop/desktop/latest?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3
+[09/07/26 16:51:03] info: Program: Starting update, downloading from https://central.github.com/api/deployments/desktop/desktop/latest?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3
+[09/07/26 16:51:03] info: Program: About to update to: C:\Users\user\AppData\Local\GitHubDesktop
+[09/07/26 16:51:03] info: CheckForUpdateImpl: Using existing staging user ID: 4eb61839-0861-51f8-9a91-be1cce8c0dd0
+[09/07/26 16:51:04] info: CheckForUpdateImpl: Downloading RELEASES file from https://central.github.com/api/deployments/desktop/desktop/latest?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3
+[09/07/26 16:51:04] info: FileDownloader: Downloading url: https://central.github.com/api/deployments/desktop/desktop/latest/RELEASES?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3&id=GitHubDesktop&localVersion=3.5.8&arch=amd64
+[09/07/26 16:51:05] info: FileDownloader: Downloading file: https://central.github.com/api/deployments/desktop/desktop/latest/GitHubDesktop-3.5.9-delta.nupkg
+[09/07/26 16:51:05] info: FileDownloader: Downloading file: https://central.github.com/api/deployments/desktop/desktop/latest/GitHubDesktop-3.5.10-delta.nupkg
+[09/07/26 16:51:05] info: FileDownloader: Downloading file: https://central.github.com/api/deployments/desktop/desktop/latest/GitHubDesktop-3.5.12-delta.nupkg
+[09/07/26 16:51:05] info: FileDownloader: Downloading file: https://central.github.com/api/deployments/desktop/desktop/latest/GitHubDesktop-3.5.11-delta.nupkg
+[09/07/26 16:51:05] info: FileDownloader: Downloading file: https://central.github.com/api/deployments/desktop/desktop/latest/GitHubDesktop-3.6.0-delta.nupkg
+[09/07/26 16:51:05] info: FileDownloader: Downloading file: https://central.github.com/api/deployments/desktop/desktop/latest/GitHubDesktop-3.6.1-delta.nupkg

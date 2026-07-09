@@ -1,0 +1,69 @@
+﻿[09/07/26 16:51:02] info: Program: Starting Squirrel Updater: --checkForUpdate https://central.github.com/api/deployments/desktop/desktop/latest?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3
+[09/07/26 16:51:02] info: Program: Fetching update information, downloading from https://central.github.com/api/deployments/desktop/desktop/latest?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3
+[09/07/26 16:51:02] info: CheckForUpdateImpl: Generated new staging user ID: 4eb61839-0861-51f8-9a91-be1cce8c0dd0
+[09/07/26 16:51:02] info: CheckForUpdateImpl: Downloading RELEASES file from https://central.github.com/api/deployments/desktop/desktop/latest?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3
+[09/07/26 16:51:02] info: FileDownloader: Downloading url: https://central.github.com/api/deployments/desktop/desktop/latest/RELEASES?version=3.5.8&env=production&guid=bb3dd1c0-9fc9-4721-94a4-a7d0e23cd6b3&id=GitHubDesktop&localVersion=3.5.8&arch=amd64
+[09/07/26 16:51:03] warn: UpdateInfo: Couldn't get release notes for:GitHubDesktop-3.5.9-delta.nupkg: System.IO.FileNotFoundException: ファイル 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.9-delta.nupkg' が見つかりませんでした。
+ファイル名 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.9-delta.nupkg' です。'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.9-delta.nupkg'
+   場所 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   場所 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   場所 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   場所 NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   場所 NuGet.ZipPackage.EnsureManifest()
+   場所 Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   場所 Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09/07/26 16:51:03] warn: UpdateInfo: Couldn't get release notes for:GitHubDesktop-3.5.10-delta.nupkg: System.IO.FileNotFoundException: ファイル 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.10-delta.nupkg' が見つかりませんでした。
+ファイル名 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.10-delta.nupkg' です。'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.10-delta.nupkg'
+   場所 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   場所 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   場所 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   場所 NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   場所 NuGet.ZipPackage.EnsureManifest()
+   場所 Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   場所 Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09/07/26 16:51:03] warn: UpdateInfo: Couldn't get release notes for:GitHubDesktop-3.5.11-delta.nupkg: System.IO.FileNotFoundException: ファイル 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.11-delta.nupkg' が見つかりませんでした。
+ファイル名 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.11-delta.nupkg' です。'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.11-delta.nupkg'
+   場所 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   場所 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   場所 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   場所 NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   場所 NuGet.ZipPackage.EnsureManifest()
+   場所 Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   場所 Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09/07/26 16:51:03] warn: UpdateInfo: Couldn't get release notes for:GitHubDesktop-3.5.12-delta.nupkg: System.IO.FileNotFoundException: ファイル 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.12-delta.nupkg' が見つかりませんでした。
+ファイル名 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.12-delta.nupkg' です。'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.5.12-delta.nupkg'
+   場所 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   場所 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   場所 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   場所 NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   場所 NuGet.ZipPackage.EnsureManifest()
+   場所 Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   場所 Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09/07/26 16:51:03] warn: UpdateInfo: Couldn't get release notes for:GitHubDesktop-3.6.0-delta.nupkg: System.IO.FileNotFoundException: ファイル 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.0-delta.nupkg' が見つかりませんでした。
+ファイル名 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.0-delta.nupkg' です。'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.0-delta.nupkg'
+   場所 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   場所 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   場所 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   場所 NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   場所 NuGet.ZipPackage.EnsureManifest()
+   場所 Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   場所 Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09/07/26 16:51:03] warn: UpdateInfo: Couldn't get release notes for:GitHubDesktop-3.6.1-delta.nupkg: System.IO.FileNotFoundException: ファイル 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.1-delta.nupkg' が見つかりませんでした。
+ファイル名 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.1-delta.nupkg' です。'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.1-delta.nupkg'
+   場所 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   場所 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   場所 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   場所 NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   場所 NuGet.ZipPackage.EnsureManifest()
+   場所 Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   場所 Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09/07/26 16:51:03] warn: UpdateInfo: Couldn't get release notes for:GitHubDesktop-3.6.2-delta.nupkg: System.IO.FileNotFoundException: ファイル 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.2-delta.nupkg' が見つかりませんでした。
+ファイル名 'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.2-delta.nupkg' です。'C:\Users\user\AppData\Local\GitHubDesktop\packages\GitHubDesktop-3.6.2-delta.nupkg'
+   場所 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   場所 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   場所 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   場所 NuGet.ZipPackage.<>c__DisplayClass9_0.<.ctor>b__0()
+   場所 NuGet.ZipPackage.EnsureManifest()
+   場所 Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   場所 Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[09/07/26 16:51:03] info: Program: Finished Squirrel Updater
