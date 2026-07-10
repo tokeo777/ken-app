@@ -1,6 +1,0 @@
-tomi
-[
-build
-]
-publish = "-"
-functions = "netlify/functions"
