@@ -1,26 +1,18 @@
 // Netlify Function: Anthropic APIプロキシ
-// APIキーは Netlify UI の環境変数 ANTHROPIC_API_KEY から読み込み（設定済み）
-// ブラウザでこのURLを開くと {"ok":true} が返る＝デプロイ成功の確認になります。
+// 環境変数 ANTHROPIC_API_KEY をNetlifyのUIで設定しておくこと（設定済み）
+// AndroidのWebView（file://起点）からのリクエストは Origin: null で届くため、
+// CORSは "*" で許可する必要があります。
 
 exports.handler = async (event) => {
   const corsHeaders = {
-    'Access-Control-Allow-Origin': '*', // Android WebView（Origin: null）対応
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
   };
 
   // プリフライト対応
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 204, headers: corsHeaders, body: '' };
-  }
-
-  // ヘルスチェック（ブラウザで開いて動作確認できる）
-  if (event.httpMethod === 'GET') {
-    return {
-      statusCode: 200,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ok: true, keySet: !!process.env.ANTHROPIC_API_KEY }),
-    };
   }
 
   if (event.httpMethod !== 'POST') {

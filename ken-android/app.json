@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "健康オタク・ケン",
+    "slug": "kenko-otaku-ken",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#f7f8f3",
+    "assetBundlePatterns": [
+      "assets/*"
+    ],
+    "android": {
+      "package": "com.tokeo777.kenkootakuken",
+      "versionCode": 1,
+      "permissions": ["INTERNET"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#97C459"
+      }
+    },
+    "plugins": []
+  }
+}
