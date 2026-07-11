@@ -3665,7 +3665,7 @@ async function sendMsg(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({
-        model:'claude-sonnet-4-20250514',
+        model:'claude-sonnet-4-6',
         max_tokens:1000,
         system:`あなたは熱狂的な健康オタクの「ケン」です。ユーザーの健康へのきっかけは「${userMotive}」です。その背景に寄り添いながら、栄養学・運動生理学・睡眠科学・メンタルヘルスに基づいた実践的なアドバイスを提供してください。口調はフレンドリーで元気よく絵文字を適度に使う。200〜300文字程度で簡潔に。最後に小さなTipsを一つ添える。日本語で回答する。
 ユーザーが不安・落ち込み・イライラ・パニック・孤独など精神的なつらさを訴えた場合は、温かく寄り添いながら「🧘 こころタブに気分別のリラックス法があるよ！ぜひ見てみて」と自然に案内してください。`,
@@ -3806,7 +3806,7 @@ async function sendSynKen(){
   synKenHistory.push({role:'user', content: text});
   try {
     const res = await fetch(AI_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,
         system:`あなたは栄養学の専門家「ケン」です。栄養素の相乗効果・拮抗作用について、科学的根拠に基づき専門的かつわかりやすく解説します。具体的な食材例・摂取量の目安・注意点も含めて200〜300文字で日本語で答えてください。`,
         messages:synKenHistory})});
     const data = await res.json();
@@ -4514,7 +4514,7 @@ async function analyzeAllDiaries(){
       method: 'POST',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 600,
         system: `あなたは健康RPGのゲームマスターです。プレイヤーの日記を読み、以下の6つのステータスへの貢献度を分析してください。
 ステータス：コミュ力・集中力・行動力・メンタル力・健康力・知恵力
@@ -5352,7 +5352,7 @@ async function sendBrainKen(){
   try {
     const res = await fetch(AI_ENDPOINT,{method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,
         system:`あなたは脳科学・神経科学の専門家「ケン」です。脳内物質（神経伝達物質・ホルモン）について、科学的根拠に基づき、わかりやすく実践的に解説します。絵文字を適度に使い、200〜300文字で具体的なアドバイスを日本語で返してください。`,
         messages:brainKenHistory})});
     const data = await res.json();
@@ -7682,7 +7682,7 @@ async function sendAstroChat(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
+        model:'claude-sonnet-4-6',
         max_tokens:1000,
         system:`あなたは本格的な占星術師です。相談者は${year}年${month}月${day}日生まれで、太陽星座は${sunSign.name}（${sunSign.icon}）です。キーワードは「${sunSign.keyword}」。占星術の知識を活かして、具体的で温かみのある占い・アドバイスを200〜300文字で日本語で返してください。`,
         messages: astroChatHistory
@@ -7769,7 +7769,7 @@ async function sendRen(){
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
+        model:'claude-sonnet-4-6',
         max_tokens:1000,
         system:`あなたは恋愛オタクの「レン」です。恋愛心理学・コミュニケーション・人間関係に精通した恋愛専門アドバイザーです。
 特徴：
