@@ -1,0 +1,3 @@
+toml[build]
+  publish = "."
+  functions = "netlify/functions"
